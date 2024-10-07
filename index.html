@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+    <style>
+        .grid>div {
+            grid-row: var(--r);
+            grid-column: var(--c);
+        }
+
+        @media (max-width: 768px) {
+            .grid {
+                grid-template-columns: repeat(16, 1fr) !important;
+                grid-template-rows: repeat(22, auto) !important;
+            }
+
+            .grid>div {
+                width: 100%;
+                max-width: none;
+                height: auto;
+                margin-bottom: 0;
+            }
+
+            .grid img {
+                width: 240%;
+                height: 200%;
+                object-fit: cover;
+                transform: translate(-5%, -5%);
+            }
+        }
+    </style>
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div id="loader" class="absolute flex items-center  justify-center top-0  z-[99] w-full h-screen ">
+        <div class="slide w-[20%] h-screen bg-zinc-300"></div>
+        <div class="slide w-[20%] h-screen bg-zinc-300"></div>
+        <div class="slide w-[20%] h-screen bg-zinc-300"></div>
+        <div class="slide w-[20%] h-screen bg-zinc-300"></div>
+        <div class="slide w-[20%] h-screen bg-zinc-300"></div>
+        <h1 id="count" class="absolute right-10 lg:right-20 bottom-10  text-4xl lg:text-7xl font-black ">100%</h1>
+        <!-- loadtxtcont  -->
+        <div id="loadtxtCont"
+            class="  absolute flex flex-col items-center  text-transparent justify-center w-[90%] h-[40%] lg:h-[70%] lg:w-[65%]  p-5">
+            <div class=" h-[30%] r loadtxt w-full text-5xl lg:text-9xl">
+                <h1 id="loadtxt1"></h1>
+            </div>
+            <div
+                class=" loadtxt h-[30%] w-full flex gap-10 items-center justify-center text-center text-5xl lg:text-9xl">
+                <h1 id="loadtxt2"></h1>
+                <div class="h-full w-[50%]   ">
+                    <img id="loadimg" class="h-[100%] w-[100%]" src="./src/img/hacker1.gif" alt="">
+                </div>
+            </div>
+            <div id="loadtxt3" class="h-[30%] mt-10 loadtxt w-full text-5xl lg:text-9xl">
+
+            </div>
+        </div>
+    </div>
+    <div class="wrapper w-full bg-zinc-900">
+
+        <section class="w-full bg-zinc-900">
+            <div class="grid grid-cols-8 pb-5  min-h-screen grid-rows-20 overflow-hidden gap-4">
+                <!-- Row 1 -->
+                <div class="aspect-square mt-6 md:w-full" style="--r: 1; --c: 3;">
+                    <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80" alt="Portrait of a woman"
+                        class="w-full h-full object-cover">
+                </div>
+                <div class="aspect-square mt-6 md:w-full" style="--r: 1; --c: 7;">
+                    <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e" alt="Portrait of a man"
+                        class="w-full h-full object-cover">
+                </div>
+                <!-- Row 2 -->
+                <div class="aspect-square md:w-full" style="--r: 2; --c: 1;">
+                    <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330" alt="Portrait of a woman"
+                        class="w-full h-full object-cover">
+                </div>
+                <div class="aspect-square md:w-full" style="--r: 2; --c: 5;">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d" alt="Portrait of a man"
+                        class="w-full h-full object-cover">
+                </div>
+                <!-- Row 3 -->
+                <div class="aspect-square md:w-full" style="--r: 3; --c: 2;">
+                    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb" alt="Portrait of a woman"
+                        class="w-full h-full object-cover">
+                </div>
+                <div class="aspect-square md:w-full" style="--r: 3; --c: 6;">
+                    <img src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6" alt="Portrait of a man"
+                        class="w-full h-full object-cover">
+                </div>
+                <!-- Row 4 -->
+                <div class="aspect-square md:w-full" style="--r: 4; --c: 4;">
+                    <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9" alt="Portrait of a woman"
+                        class="w-full h-full object-cover">
+                </div>
+                <div class="aspect-square md:w-full" style="--r: 4; --c: 8;">
+                    <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d" alt="Portrait of a man"
+                        class="w-full h-full object-cover">
+                </div>
+                <!-- Row 5 -->
+                <div class="aspect-square md:w-full" style="--r: 5; --c: 1;">
+                    <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2" alt="Portrait of a woman"
+                        class="w-full h-full object-cover">
+                </div>
+                <div class="aspect-square md:w-full" style="--r: 5; --c: 7;">
+                    <img src="https://images.unsplash.com/photo-1519345182560-3f2917c472ef" alt="Portrait of a man"
+                        class="w-full h-full object-cover">
+                </div>
+                <!-- Row 6 -->
+                <div class="aspect-square md:w-full" style="--r: 6; --c: 3;">
+                    <img src="https://images.unsplash.com/photo-1488426862026-3ee34a7d66df" alt="Portrait of a woman"
+                        class="w-full h-full object-cover">
+                </div>
+                <div class="aspect-square md:w-full" style="--r: 6; --c: 5;">
+                    <img src="https://images.unsplash.com/photo-1499996860823-5214fcc65f8f" alt="Portrait of a man"
+                        class="w-full h-full object-cover">
+                </div>
+                <!-- Row 7 -->
+                <div class="aspect-square md:w-full" style="--r: 7; --c: 2;">
+                    <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1" alt="Portrait of a woman"
+                        class="w-full h-full object-cover">
+                </div>
+                <div class="aspect-square md:w-full" style="--r: 7; --c: 8;">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d" alt="Portrait of a man"
+                        class="w-full h-full object-cover">
+                </div>
+                <!-- Row 8 -->
+                <div class="aspect-square md:w-full" style="--r: 8; --c: 4;">
+                    <img src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04" alt="Portrait of a woman"
+                        class="w-full h-full object-cover">
+                </div>
+                <div class="aspect-square md:w-full" style="--r: 8; --c: 6;">
+                    <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e" alt="Portrait of a man"
+                        class="w-full h-full object-cover">
+                </div>
+                <!-- Row 9 -->
+                <div class="aspect-square md:w-full" style="--r: 9; --c: 1;">
+                    <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330" alt="Portrait of a woman"
+                        class="w-full h-full object-cover">
+                </div>
+                <div class="aspect-square md:w-full" style="--r: 9; --c: 7;">
+                    <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d" alt="Portrait of a man"
+                        class="w-full h-full object-cover">
+                </div>
+                <!-- Row 10 -->
+                <div class="aspect-square md:w-full" style="--r: 10; --c: 3;">
+                    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb" alt="Portrait of a woman"
+                        class="w-full h-full object-cover">
+                </div>
+                <div class="aspect-square md:w-full" style="--r: 10; --c: 5;">
+                    <img src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6" alt="Portrait of a man"
+                        class="w-full h-full object-cover">
+                </div>
+            </div>
+
+            <div
+                class=" bg-gradient-to-b from-transparent via-black/50 to-transparent  fixed top-0 left-0 w-full h-screen text-white font-black  flex items-center justify-center">
+                <!-- txtmaincont  -->
+                <div class="relative txtcont   w-[90%] h-[70%] flex flex-col   gap-1">
+                    <div class="utextcont h-[40%] w-full flex  items-start ">
+                        <div
+                            class="w-[10%]  h-full translate-y-[-20%]  translate-x-[70%] border-l-[5px] border-t-[10px] rounded-lg border-sky-500 bg-transparent">
+                        </div>
+                        <div class="h-full w-[90%] flex flex-col items-start justify-cente">
+                            <div class="w-[45%] text-7xl font-bold text-right">Department of</div>
+                            <div class="w-[43%] text-7xl font-bold text-right">cse💻</div>
+                        </div>
+                    </div>
+                    <div class="utextcont h-[20%] w-full flex  flex-col items-center justify-center">
+                        <div
+                            class="w-[15%] pre text-2xl font-thin text-center h-full  border-[3px] border-zinc-200  flex items-center justify-center rounded-full">
+                            PRES🙃ENTS</div>
+                    </div>
+                    <div class="utextcont h-[40%] w-full flex  items-start ">
+                        <div class="h-full w-[90%] flex flex-col items-end justify-cente">
+                            <div class="w-[40%] text-8xl font-bold text-right"> <span
+                                    class="text-8xl rotate-45">⚡</span>Aarhant
+                            </div>
+                            <div class="w-[40%] text-9xl font-bold text-right">3.O</div>
+                        </div>
+                        <div
+                            class="w-[10%]  h-full  translate-y-[20%]  translate-x-[-50%]  border-r-[5px] border-b-[10px] rounded-lg border-amber-300  bg-transparent">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="w-full h-screen relative sticky top-0 bg-zinc-700 z-[9]"></div>
+        <div class="w-full h-screen bg-amber-600 relative z-[12]"></div>
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+    <script src="app.js"></script>
+
+</body>
+
+</html>

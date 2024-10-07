@@ -1,0 +1,25 @@
+@font-face {
+  font-family: "dirtyline";
+  src: url("src/fonts/Dirtyline 36daysoftype 2022.otf");
+}
+
+.txtcont {
+  font-family: "dirtyline";
+}
+
+.loadtxt {
+  font-family: "dirtyline";
+}
+#count {
+  font-family: "dirtyline";
+  -webkit-text-stroke: 1px black;
+  color: transparent;
+}
+
+#loadtxt2 {
+  font-family: "dirtyline";
+  -webkit-text-stroke: 3px black;
+  color: transparent;
+}
+
+/* // border  */
